@@ -1,0 +1,42 @@
+My experiments with branch predictors for the Branch Prediction Championship 2016. To run the code, please see the three folders - VOTING, SWT. Folder named
+VOTING has code for the the weighted TAGE voting and the other named SWT has
+code for the separate taken/not taken weights with global local history.
+VOTING gave me the best result out of all ideas.It implements a perceptron based 
+learning algorithm to select the best prediction out of all TAGE tables.
+
+VOTING Folder:
+Has predictor.cc and predictor.h
+The predictor has ifdef VOTING for activating voting. It has been enabled by
+default. To compile, please use make. Code is present in .cc and .h. The
+baseline predictor can be run by simply commenting ifdef VOTING.
+
+SWT Folder:
+Has predictor.cc and predictor.h
+This code has a ifdef LOOPPREDICTOR, ifdef GLOCAL for hashing. It has been
+enabled by default. To compile, please use make. Code is present in .cc and .h
+
+Space:
+      BASELINE:
+          Increased the number of entries on each tagged component to increase
+          to 128KB. Didn't increase number of entries beyond 2^12(from 2^10),
+          as that would have shot up the storage space.
+          T0 - T2: 98304
+          T3 - T9: 458752
+          T10 - T16: 262144
+          T17 - T19: 36864
+          Other counters: 20407
+          Total bits: 9039048
+          Space: 112KB
+          2^12 entries per table according to
+          the new category requirement.
+
+      VOTING:
+          Unlimited space category.
+          Additional 2^14 entries with 20 weights of type int.
+
+      SWT:
+          Uses unlimited space, i.e. more than 128 KB. The breakdown:
+          2 tables of of T/NT each with 2^16 entries of 24 weights
+          1 table of weight with 2^16 entries of 24 weights
+          1 table of weights with 2^16 entries of 48 weights
+
