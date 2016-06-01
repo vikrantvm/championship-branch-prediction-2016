@@ -1,7 +1,7 @@
 My experiments with branch predictors for the Branch Prediction Championship 2016. 
-To run the code, please see the three folders - VOTING, SWT. Folder named
+To run the code, please see the folders - VOTING, SWT. Folder named
 VOTING has code for the the weighted TAGE voting and the other named SWT has
-code for the separate taken/not taken weights with global local history.
+code for the separate taken/not taken weights with global-local history.
 VOTING gave me the best result out of all ideas.It implements a perceptron based 
 learning algorithm to select the best prediction out of all TAGE tables.
 
