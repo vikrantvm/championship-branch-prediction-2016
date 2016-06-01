@@ -1,21 +1,14 @@
-// -*- mode:c++; indent-tabs-mode:nil; -*-
-
 // This source code is derived from ISL-TAGE (CBP-3).
 // TAGE is based on the great work from Andre Seznec and Pierre Michaud.
 // In this source code, my contribution for the performance is quite small.
+// I use a seprate table to store the weights of TAGE tag hits and try to learn 
+// them on the go using perceptrons. Achieves MPKI of 3.33 against baseline of 3.22
 
 // About ISL-TAGE, please refer to previous branch prediction championship.
 // URL: http://www.jilp.org/jwac-2/
 
 // About TAGE predictor, please refer to JILP online publication.
 // URL: http://www.jilp.org/vol8/v8paper1.pdf
-
-// In this predictor, we tried to combine local branch history to
-// improve the performance of TAGE predictor because there are no
-// effective way to exploit the local history for the partial tag
-// matching. We combine global branch history and local branch
-// history for the indexing part of TAGE branch predictor.
-// It helps to reduce the branch miss prediction.
 
 #ifndef _PREDICTOR_H_
 #define _PREDICTOR_H_
