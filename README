@@ -1,4 +1,7 @@
-My experiments with branch predictors for the Branch Prediction Championship 2016. 
+My experiments with branch predictors for the Branch Prediction Championship 2016 (CBP-5).
+http://www.jilp.org/cbp2016/
+Part of the workshop on Computer Architecture Competitions:
+5th JILP Workshop on Computer Architecture Competitions (JWAC-5)
 To run the code, please see the folders - VOTING, SWT. Folder named
 VOTING has code for the the weighted TAGE voting and the other named SWT has
 code for the separate taken/not taken weights with global-local history.
