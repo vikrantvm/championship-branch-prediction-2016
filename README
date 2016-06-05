@@ -8,7 +8,7 @@ code for the separate taken/not taken weights with global-local history.
 VOTING gave me the best result out of all ideas.It implements a perceptron based 
 learning algorithm to select the best prediction out of all TAGE tables.
 
-VOTING Folder:
+VOTING Folder: 
 Has predictor.cc and predictor.h
 The predictor has ifdef VOTING for activating voting. It has been enabled by
 default. To compile, please use make. Code is present in .cc and .h. The
